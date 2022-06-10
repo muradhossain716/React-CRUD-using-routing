@@ -1,0 +1,28 @@
+.wrapper {
+  padding: 40px;
+  width: 500px;
+  margin: auto auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 2rem;
+}
+.table-dark {
+  background-color: black;
+  color: white;
+}
+
+.tableWrapper {
+  padding: 40px;
+  width: 1000px;
+  margin: auto auto;
+}
+.linkStyle {
+  text-decoration: none;
+  color: white;
+}
+.linkStyle:hover {
+  color: white;
+}
+tbody tr:hover {
+  color: black;
+  background-color: rgb(39, 63, 167) !important;
+}
