@@ -11,6 +11,10 @@ export default function ShowData({showData,deleteData,editData}) {
     editData(data)
   }
   return (
+    <>
+    <div>
+       <button type="button" className={`btn btn-warning addDataBtn`}><Link to="/adddata" className="linkStyle">Add Data</Link></button>
+    </div>
     <div className="tableWrapper">
         <table className={`table table-hover table-dark`.split(' ').join(' ')}>
           <thead>
@@ -31,7 +35,7 @@ export default function ShowData({showData,deleteData,editData}) {
                       <th scope="row">{ind+1}</th>
                       <td>{el.name}</td>
                       <td>{el.password}</td>
-                      <td><button type="button" className={`btn btn-primary`}> <Link to="/editdata" className="linkStyle" onClick={()=>edit(el,ind)}>Edit Data</Link></button>/<button type="button" className={`btn btn-warning`} onClick={()=>handleDelete(ind)}>Delete</button></td>
+                      <td><button type="button" className={`btn btn-primary`}> <Link to={`/editdata/${ind}`} className="linkStyle" >Edit Data</Link></button>/<button type="button" className={`btn btn-warning`} onClick={()=>handleDelete(ind)}>Delete</button></td>
                   </tr>
                 )
               })
@@ -42,5 +46,6 @@ export default function ShowData({showData,deleteData,editData}) {
           </tbody>
         </table>
     </div>
+    </>
   )
 }
