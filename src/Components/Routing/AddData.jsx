@@ -19,10 +19,10 @@ export default function AddData({addData}) {
       let data={
         name:name,password:password
       }
-     console.log(data,"add section")
-     addData(data);
-     setName('')
-     setPassword('');
+     
+      addData(data);
+      setName('')
+      setPassword('');
       navigate("/", { replace: true });
     }
   
